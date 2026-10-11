@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Segoe UI", Roboto, sans-serif;
+    font-size: 14.5px;
+    margin: 0;
+}
+
+body p, ul {
+    line-height: 1.6;
+}
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+aside {
+    width: 30%;
+    min-height: 100vh;
+    background-color: #96b6db;
+    color: white;
+    padding: 25px;
+    flex-shrink: 0;
+
+}
+
+aside p {
+    line-height: 1;
+}
+.principal {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 30px;
+}
+
+main {
+    padding: 30px;
+    flex: 1;
+}
+
+footer {
+    padding: 20px;
+}
+
+/*foto nickolas*/
+.ft-cj {
+    width: 250px;
+    height: 250px;
+
+    margin: 0 auto 25px auto;
+    padding: 10px;
+
+    background-color: #FFFFFF1F;
+    border: 1px solid #ffffff33;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+}
+
+.ft-cj img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.encabezado {
+    position: relative;
+    overflow: hidden;
+    background-color: #163a58;
+    color: white;
+}
+
+.ft-goiburu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    opacity: 0.15;
+}
+
+.contenido-goiburu {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    padding: 30px;
+    background-color: transparent;
+}
+
+.encabezado, header, main, footer {
+    width: 100%;
+    margin: 0;
+}
+
+/* LAS 4 CAJAS */
+
+.cont-cajas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+/* CAJAS */
+
+.caja {
+    background:
+        linear-gradient(#fafdff, #fafdff) padding-box,
+        linear-gradient(135deg, #0875d1, #96b6db) border-box;
+
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    padding: 25px 18px;
+    color: #163a58;
+}
+
+.zen {
+    display: block;
+    color: #0875d1;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.caja h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+}
+
+.caja .sub {
+    color: #66809b;
+    margin: 0 0 14px 0;
+}
+
+.caja p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/*responsive*/
+@media (max-width: 1024px) {
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .ft-cj {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+    /* Las 4 cajas pasan a 2 columnas */
+    .cont-cajas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    /* aside */
+    aside {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .ft-cj {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 15px auto;
+    }
+
+    aside h2 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    aside h4 {
+        margin-bottom: 2px;
+    }
+
+/* goiburu */
+    header {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    header h2 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    /* Las 4 cajas pasan a 1 columna */
+    .cont-cajas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .caja {
+        padding: 18px 15px;
+    }
+
+    footer {
+        padding: 15px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+/* ---------- MÓVILES MUY PEQUEÑOS (hasta 400px) ---------- */
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 19px;
+    }
+
+    .ft-cj {
+        width: 130px;
+        height: 130px;
+    }
+
+    .caja h3 {
+        font-size: 15px;
+    }
+
+    .caja p {
+        font-size: 12.5px;
+    }
+}
